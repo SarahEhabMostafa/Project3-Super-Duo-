@@ -12,6 +12,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,8 +58,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         title = getTitle();
 
         // Set up the drawer.
-        navigationDrawerFragment.setUp(R.id.navigation_drawer,
-                    (DrawerLayout) findViewById(R.id.drawer_layout));
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationDrawerFragment.setUp(R.id.navigation_drawer, drawerLayout);
+        drawerLayout.closeDrawer(Gravity.LEFT);
 
 
         if (getSupportActionBar()!=null) {
@@ -193,7 +195,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
                 switch (requestCode) {
                     case AddBook.REQUEST_CODE_SCAN:
                         String isbn = data.getStringExtra(AddBook.SCAN_CONTENTS);
-                        Toast.makeText(this, "ISBN= " +isbn , Toast.LENGTH_LONG).show();
+//                        Toast.makeText(this, "ISBN= " +isbn , Toast.LENGTH_LONG).show();
                         if(currentFragment instanceof AddBook) {
                             ((AddBook)currentFragment).ean.setText(isbn);
                         }

@@ -39,8 +39,8 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
     public static final String SCAN_CONTENTS = "scanContents";
     private ProgressDialog progressDialog;
 
-    private String mScanFormat = "Format:";
-    private String mScanContents = "Contents:";
+//    private String mScanFormat = "Format:";
+//    private String mScanContents = "Contents:";
 
     public AddBook(){
     }
@@ -192,11 +192,17 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         textViewBookSubtitle.setText(bookSubTitle);
 
         String authors = data.getString(data.getColumnIndex(AlexandriaContract.AuthorEntry.AUTHOR));
-        String[] authorsArr = authors.split(",");
-        textViewAuthors.setLines(authorsArr.length);
-        textViewAuthors.setText(authors.replace(",", "\n"));
+        if(authors!=null && !authors.trim().isEmpty()) {
+            String[] authorsArr = authors.split(",");
+            textViewAuthors.setLines(authorsArr.length);
+            textViewAuthors.setText(authors.replace(",", "\n"));
+        } else {
+            textViewAuthors.setLines(1);
+            textViewAuthors.setText(getString(R.string.author_not_available));
+        }
+
         String imgUrl = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.IMAGE_URL));
-        if(Patterns.WEB_URL.matcher(imgUrl).matches()){
+        if(imgUrl!=null && Patterns.WEB_URL.matcher(imgUrl).matches()){
             new DownloadImage(imageViewBookCover).execute(imgUrl);
             imageViewBookCover.setVisibility(View.VISIBLE);
         }
@@ -233,7 +239,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         if(progressDialog==null)
             progressDialog = new ProgressDialog(getActivity());
 
-        progressDialog.setTitle("Loading..");
+        progressDialog.setTitle(getString(R.string.loading));
         progressDialog.show();
     }
 

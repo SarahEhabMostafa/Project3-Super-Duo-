@@ -31,4 +31,6 @@
     <string name="title_activity_scan" translatable="false">ScanActivity</string>
 
     <string name="no_data" translatable="true">No Book found</string>
+    <string name="author_not_available" translatable="true">Author(s) not available</string>
+    <string name="loading" translatable="true">Loading..</string>
 </resources>
