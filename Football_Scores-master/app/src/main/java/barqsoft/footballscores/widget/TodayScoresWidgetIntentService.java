@@ -12,6 +12,7 @@ import android.widget.RemoteViews;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import barqsoft.footballscores.Constants;
 import barqsoft.footballscores.MainActivity;
 import barqsoft.footballscores.R;
 import barqsoft.footballscores.Utilies;
@@ -24,32 +25,32 @@ public class TodayScoresWidgetIntentService extends IntentService {
     private static final String TAG = TodayScoresWidgetProvider.class.getSimpleName();
 
     public TodayScoresWidgetIntentService() {
-        super("TodayScoresWidgetIntentService");
+        super(TodayScoresWidgetIntentService.class.getSimpleName());
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        Log.e(TAG, "onHandleIntent");
+//        Log.e(TAG, "onHandleIntent");
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
         int[] appWidgetIds = appWidgetManager.getAppWidgetIds
                 (new ComponentName(this, TodayScoresWidgetProvider.class));
 
         Date dateObj = new Date(System.currentTimeMillis());
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(Constants.DATE_FORMAT);
 
         Cursor data = getContentResolver().query(scores_table.buildScoreWithDate(),
                 null, null, new String[] {simpleDateFormat.format(dateObj)}, scores_table.TIME_COL + " ASC");
 
-        Log.e(TAG, "data=" + data);
+//        Log.e(TAG, "data=" + data);
 
         if (data == null) {
             return;
         }
 
-        Log.e(TAG, "data size=" + data.getCount());
+//        Log.e(TAG, "data size=" + data.getCount());
 
         if (!data.moveToFirst()) {
-            Log.e(TAG, "!data.moveToFirst()");
+//            Log.e(TAG, "!data.moveToFirst()");
             data.close();
             return;
         }
@@ -63,7 +64,7 @@ public class TodayScoresWidgetIntentService extends IntentService {
                 + " " + */data.getString(data.getColumnIndex(scores_table.TIME_COL));
         data.close();
 
-        Log.e(TAG, "Home=" + home + ", Away=" + away);
+//        Log.e(TAG, "Home=" + home + ", Away=" + away);
 
 
         for (int appWidgetId : appWidgetIds) {

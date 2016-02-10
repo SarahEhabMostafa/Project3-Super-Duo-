@@ -25,7 +25,7 @@ public class ScoresWidgetProvider extends AppWidgetProvider {
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
 
-        Log.e(TAG, "onRecieve");
+//        Log.e(TAG, "onRecieve");
 //        context.startService(new Intent(context, ScoresWidgetRemoteViewsService.class));
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
         int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(context, getClass()));
@@ -36,7 +36,7 @@ public class ScoresWidgetProvider extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 //        super.onUpdate(context, appWidgetManager, appWidgetIds);
 
-        Log.e(TAG, "onUpdate");
+//        Log.e(TAG, "onUpdate");
 //        context.startService(new Intent(context, ScoresWidgetRemoteViewsService.class));
 
         for (int appWidgetId: appWidgetIds) {

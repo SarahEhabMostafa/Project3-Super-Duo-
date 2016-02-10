@@ -17,6 +17,33 @@
 
         During the off season, fake data will be added to the app.
     </string>
-    <string name="api_key" translatable="false">INSERT_API_KEY_HERE</string>
+    <string name="api_key" translatable="false">7c26a71af6a14d4fb7a83b90b66a397c</string>
     <string name="dummy_data" translatable="false">{\"timeFrameStart\":\"2015-06-18\",\"timeFrameEnd\":\"2015-06-19\",\"count\":1,\"fixtures\":[{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}}]}</string>
+
+    <string name="home" translatable="true">Home</string>
+
+    <string name="league_serie_a" translatable="true">Seria A</string>
+    <string name="league_premier_legaue" translatable="true">Premier League</string>
+    <string name="league_champions_league" translatable="true">UEFA Champions League</string>
+    <string name="league_primera_division" translatable="true">Primera Division</string>
+    <string name="league_bundesliga" translatable="true">Bundesliga</string>
+    <string name="league_unknown" translatable="true">Not known League Please report</string>
+
+    <string name="matchday_" translatable="true">Matchday : </string>
+    <string name="matchday_final" translatable="true">Final</string>
+    <string name="matchday_semi_final" translatable="true">SemiFinal</string>
+    <string name="matchday_quarter_final" translatable="true">QuarterFinal</string>
+    <string name="matchday_first_knockout" translatable="true">First Knockout round</string>
+    <string name="matchday_group_stages" translatable="true">Group Stages, Matchday : 6</string>
+
+    <string name="team_name_arsenal_london_fc" translatable="true">Arsenal London FC</string>
+    <string name="team_name_manchester_united_fc" translatable="true">Manchester United FC</string>
+    <string name="team_name_swansea_city" translatable="true">Swansea City</string>
+    <string name="team_name_leicester_city" translatable="true">Leicester City</string>
+    <string name="team_name_everton_fc" translatable="true">Everton FC</string>
+    <string name="team_name_west_ham_united_fc" translatable="true">West Ham United FC</string>
+    <string name="team_name_tottenham_hotspur_fc" translatable="true">Tottenham Hotspur FC</string>
+    <string name="team_name_west_bromwich_albion" translatable="true">West Bromwich Albion</string>
+    <string name="team_name_sunderland_afc" translatable="true">Sunderland AFC</string>
+    <string name="team_name_stoke_city_fc" translatable="true">Stoke City FC</string>
 </resources>

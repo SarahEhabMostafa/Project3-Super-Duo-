@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.TimeZone;
 import java.util.Vector;
 
+import barqsoft.footballscores.Constants;
 import barqsoft.footballscores.database.DatabaseContract;
 import barqsoft.footballscores.R;
 
@@ -222,7 +223,7 @@ public class myFetchService extends IntentService
                         if(!isReal){
                             //This if statement changes the dummy data's date to match our current date range.
                             Date fragmentdate = new Date(System.currentTimeMillis()+((i-2)*86400000));
-                            SimpleDateFormat mformat = new SimpleDateFormat("yyyy-MM-dd");
+                            SimpleDateFormat mformat = new SimpleDateFormat(Constants.DATE_FORMAT);
                             mDate=mformat.format(fragmentdate);
                         }
                     }
